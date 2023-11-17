@@ -32,6 +32,7 @@
 
         .main{
             margin-top: 10vw;
+            background-image: url('');
         }
         .main h1{
             text-align: center;
@@ -74,6 +75,7 @@
         .then (database =>{
             {
             //selct com todos os paises
+                aux+='<option value="-1" id='+'option'+' >'+'selecione um pais'+'</option>'
                 for(let i=0;i<database.length;i++){
                     aux+='<option value="'+i+'" id='+'option'+' >'+database[i].nome_pais+'</option>'
                 }   
@@ -81,22 +83,14 @@
             }
             {   
             //elementos de cada pais
-                document.querySelector('#paises').addEventListener('click',a)
+                document.querySelector('#paises').addEventListener('change',a)
                 function a(){
-                    aux_++
                     aux=''
-              
-                    if((document.querySelector('.resultado').contains(document.querySelector('.paises_text'))) == true){
-                    aux_=0
-                    }   
-                    console.log(aux_)
-                    if(aux_%2 == 0){
-                            aux+= '<p> Gentilico:   '+(database[document.querySelector('#paises').value].gentilico)+'</p>'+'<br>'+
-                            '<p> Nome_pais:   '+(database[document.querySelector('#paises').value].nome_pais)+'</p>'+'<br>'+
-                            '<p> Nome_pais_int:   '+(database[document.querySelector('#paises').value].nome_pais_int)+'</p>'+'<br>'+
-                            '<p> Sigla:   '+(database[document.querySelector('#paises').value].sigla)+'</p>'
-                            aux2.innerHTML ='<div class="paises_text">'+aux+'</div>'
-                    }
+                        aux+= '<p> Gentilico:   '+(database[document.querySelector('#paises').value].gentilico)+'</p>'+'<br>'+
+                        '<p> Nome_pais:   '+(database[document.querySelector('#paises').value].nome_pais)+'</p>'+'<br>'+
+                        '<p> Nome_pais_int:   '+(database[document.querySelector('#paises').value].nome_pais_int)+'</p>'+'<br>'+
+                        '<p> Sigla:   '+(database[document.querySelector('#paises').value].sigla)+'</p>'
+                        aux2.innerHTML ='<div class="paises_text">'+aux+'</div>'
                 }
             }
         }) 
