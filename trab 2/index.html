@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>trab 2</title>
+    <link rel="stylesheet" href="Style.css">
+    <script src="code.js" defer></script>
+</head>
+<body>
+    <div class="container">
+            <div class="bloco1">
+                <h1>Por favor insira seu CEP para a pesquisa.</h1>
+                <form>
+                    <fieldset>            
+                        <div class="bl2">
+                            <label for="cep">CEP:</label>
+                            <input type="number" name="cep" id="cep">
+                        </div>
+                        <input type="submit" name="enviar_cep" value="Enviar" id="enviar_cep">
+                    </fieldset>
+                </form>
+                <div class="resposta_cep">
+                </div>
+            </div>
+            <div class="bloco2">
+                <h1>Por favor, insira o código FIPE de um veiculo para ser analizado</h1>
+                <form>
+                    <fieldset>
+                        <div class="bl2">
+                            <label for="car">Código FIPE:</label>
+                            <input type="text" name="car" id="car">
+                        </div>
+                        <input type="submit" name="enviar_car" value="Enviar" id="enviar_car">
+                    </fieldset>
+                </form>
+                <div class="resposta_car">
+                </div>
+            </div>
+            <div class="bloco3">
+                <h1>Por favor insira a UF do estado para a análise.</h1>
+                <form>
+                    <fieldset>
+                        <div class="bl2">
+                            <label for="estado">Sigla do estado:</label>
+                            <input type="text" name="estado" id="estado">
+                        </div>
+                        <input type="submit" name="enviar_estado" value="Enviar" id="enviar_estado">
+                    </fieldset>
+                </form>
+                <div class="resposta_estado">
+                </div>
+            </div>
+            <aside id="aside">
+                <div class="sites">
+                    <button class='trab1' onclick="javascrpit:window.location.href='../trab 1/index.html'"> Trab 1</button>
+                </div>
+            </aside>
+            <div class="menu" onclick="myFunction(this); aside()">    
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <button class="reset" onclick="javascrpit:localStorage.clear();javascrpit:document.location.reload()"> Resetar </button>
+    </div>
+</body>
+</html>
