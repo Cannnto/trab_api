@@ -80,9 +80,7 @@ document.addEventListener('DOMContentLoaded',function a(){
        .then (database =>{
               let aside = document.querySelector('#aside')
               let result =  `<div class = 'feriados'> <h1> Feriados do ano de 2024 </h1><br>${JSON.stringify(database[1].name)}:${JSON.stringify(database[1].date)}<br>${JSON.stringify(database[3].name)}:${JSON.stringify(database[3].date)}<br>${JSON.stringify(database[11].name)}:${JSON.stringify(database[11].date)}</div>`
-              console.log(database)
               result = result.replaceAll('"'," ")
-              console.log (result)
               aside.innerHTML += result
        })
 })
